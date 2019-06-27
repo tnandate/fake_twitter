@@ -2,6 +2,10 @@ require 'sinatra/base'
 
 module FakeTwitter
   class StubApp < Sinatra::Base
+    get '/1.1/account/verify_credentials.json' do
+      json_response 200, fixture('verify_credentials')
+    end
+
     get '/1.1/followers/ids.json' do
       json_response 200, fixture('follower_ids')
     end
