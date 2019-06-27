@@ -3,7 +3,7 @@ require 'spec_helper'
 describe FakeTwitter::StubApp do
   describe 'GET /1.1/followers' do
     it 'returns an followers_ids response'do
-      uri = URI('https://api.twitter.com/1.1/followers')
+      uri = URI('https://api.twitter.com/1.1/followers/ids.json')
       response = JSON.parse(Net::HTTP.get(uri))
 
       expect(response['ids']).to eq [20009713, 22469930, 351223419]
