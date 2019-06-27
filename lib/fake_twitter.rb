@@ -4,6 +4,6 @@ require 'fake_twitter/stub_app'
 
 module FakeTwitter
   def self.stub_twitter
-    stub_request(:any, 'https://api.twitter.com').to_rack(FakeTwitter::StubApp)
+    stub_request(:any, /api.twitter.com/).to_rack(FakeTwitter::StubApp)
   end
 end
