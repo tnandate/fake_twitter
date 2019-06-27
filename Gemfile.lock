@@ -1,0 +1,45 @@
+PATH
+  remote: .
+  specs:
+    fake_twitter (0.1.0)
+      sinatra
+      webmock
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.6.0)
+      public_suffix (>= 2.0.2, < 4.0)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    hashdiff (0.4.0)
+    minitest (5.11.3)
+    mustermann (1.0.3)
+    public_suffix (3.1.1)
+    rack (2.0.7)
+    rack-protection (2.0.5)
+      rack
+    rake (10.5.0)
+    safe_yaml (1.0.5)
+    sinatra (2.0.5)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.5)
+      tilt (~> 2.0)
+    tilt (2.0.9)
+    webmock (3.6.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.17)
+  fake_twitter!
+  minitest (~> 5.0)
+  rake (~> 10.0)
+
+BUNDLED WITH
+   1.17.3
