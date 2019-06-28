@@ -7,7 +7,11 @@ module FakeTwitter
     end
 
     get '/1.1/followers/ids.json' do
-      json_response 200, fixture('follower_ids')
+      json_response 200, fixture('follower_and_friend_ids')
+    end
+
+    get '/1.1/friends/ids.json' do
+      json_response 200, fixture('follower_and_friend_ids')
     end
 
     private
