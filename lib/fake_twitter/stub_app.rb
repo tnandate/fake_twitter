@@ -14,6 +14,14 @@ module FakeTwitter
       json_response 200, fixture('follower_and_friend_ids')
     end
 
+    get '/1.1/followers/list.json' do
+      json_response 200, fixture('followers_list')
+    end
+
+    get '/1.1/friends/list.json' do
+      json_response 200, fixture('friends_list')
+    end
+
     private
 
     def fixture(file_name)

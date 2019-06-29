@@ -27,4 +27,22 @@ describe FakeTwitter::StubApp do
       expect(response).not_to  eq raise_error
     end
   end
+
+  describe 'GET /1.1/followers/list.json' do
+    it do
+      uri = URI('https://api.twitter.com/1.1/followers/list.json')
+      response = JSON.parse(Net::HTTP.get(uri))
+
+      expect(response).not_to  eq raise_error
+    end
+  end
+
+  describe 'GET /1.1/friends/list.json' do
+    it do
+      uri = URI('https://api.twitter.com/1.1/friends/list.json')
+      response = JSON.parse(Net::HTTP.get(uri))
+
+      expect(response).not_to  eq raise_error
+    end
+  end
 end
